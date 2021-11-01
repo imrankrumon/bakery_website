@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+
+@import 'config';
+
+/* Header */
+
+header {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95)),
+		url('../images/header-bg.jpg') center no-repeat;
+	background-size: cover;
+	position: relative;
+
+	.container {
+		position: relative;
+		height: 100%;
+		padding: 0;
+	}
+
+	.navbar-brand {
+		width: 100%;
+		max-width: 100px;
+		position: absolute;
+		top: 0.625rem;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: opacity 650ms;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.hamburger-menu {
+		position: fixed;
+		top: 1.5rem;
+		right: 1rem;
+		width: 50px;
+		display: flex;
+		border-radius: 0.25rem;
+		background: #101d2c;
+		cursor: pointer;
+		z-index: 999;
+
+		i {
+			font-size: 1.875rem;
+			color: rgba(198, 153, 99, .7);
+			margin: auto;
+		}
+
+		.fa-times {
+			display: none;
+		}
+
+		.fa-times.open {
+			display: block;
+		}
+
+		.fa-bars.open {
+			display: none;
+		}
+	}
+
+	.nav-list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: #101d2c;
+		list-style: none;
+		z-index: 900;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		opacity: 0;
+		transform: scale(0);
+		transition: opacity 650ms;
+
+		&.open {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.hero-text {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		text-align: center;
+		transform: translate(-50%, -50%);
+
+		h1 {
+			font-family: 'Niconne', cursive;
+			color: #c69963;
+		}
+
+		.btn {
+		}
+	}
+}
+
+/* About */
+.about {
+	.btn {
+		width: 150px;
+		color: #c69963 !important;
+		transition: background-color 650ms;
+
+		&:hover {
+			color: #fff !important;
+			background-color: #c69963;
+		}
+	}
+}
+
+/* Menu */
+.menu {
+	background-color: #101d2c;
+
+	hr {
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+}
+
+.shop-info {
+	i {
+		font-size: 3rem;
+		color: #c69963;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		font-family: 'Teko', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	p,
+	address {
+		margin: 0;
+		font-size: 0.875rem;
+		color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+.point-left,
+.point-right {
+	position: relative;
+	display: flex;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		background: inherit;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%) rotate(45deg);
+		z-index: 1;
+	}
+}
+
+.menu-item-desc {
+	padding: 3rem 0.7rem;
+	margin: auto;
+	color: #212529;
+
+	h6 {
+		color: #c69963;
+		font-size: 1.25rem;
+	}
+
+	h1 {
+		font-family: 'Teko', sans-serif;
+		font-size: 2rem;
+		color: #101d2c;
+		letter-spacing: 1px;
+		font-weight: 300;
+	}
+}
+
+/* Chefs Section */
+.chefs {
+	.card-body {
+		h1 {
+			font-size: 1.5rem;
+			font-family: 'Teko', sans-serif;
+			letter-spacing: 1px;
+			font-weight: 300;
+			color: #101d2c;
+		}
+
+		h6 {
+			font-size: 1rem;
+			color: #c69963;
+		}
+	}
+}
+
+/* Footer */
+footer {
+	background: #101d2c;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@import 'media';
